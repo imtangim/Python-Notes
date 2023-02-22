@@ -1,4 +1,9 @@
 fruits = ["banana","mango","apple","pineapple"]
 
-for item in fruits:
-    print(item)
+# for j in fruits:
+#     print(j)
+
+my_list = [1,2,3,4,5,6,7,8]
+my_list.append(100)
+for i in my_list:
+    print(i)
