@@ -6,10 +6,10 @@ def score(result):
     date = datetime.today()
     if(result == 'x' or result == 'o'):
         with open("Python\\Udemy\\Project\\Score.txt","a") as f:
-                score = f.write(f'Player {result.upper()} is winner---->'+ str(date.hour)+str(date.minute)+"\n")
+                score = f.write(f'Player {result.upper()} is winner---->'+ str(date.hour)+":"+str(date.minute)+":"+str(date.second)+"\n")
     else:
         with open("Python\\Udemy\\Project\\Score.txt","a") as f:
-                score = f.write(f'Match Drawn---->'+ str(date.hour)+str(date.minute)+"\n")
+                score = f.write(f'Match Drawn---->'+ str(date.hour)+":"+str(date.minute)+":"+str(date.second)+"\n")
 
 def display_score():
     import os    
@@ -19,7 +19,6 @@ def display_score():
     else:
         with open("Python\\Udemy\\Project\\Score.txt", "r") as f:
             score = f.read()
-            line = f.readline()
             print(score)    
     print()
     user_int()
@@ -78,10 +77,11 @@ def result():
 
 
 def start_game():
-
-    for i in range(9):
-        print("You CAN ANYTIME BY ENTERING ANYKEY")
+    k = 1
+    for i in range(5):
+        print("You CAN QUIT ANYTIME BY ENTERING ANYKEY")
         try:
+
             column,row = input("Enter the cordination For 'Player x ' Ex. column,row : ").split()
             column = int(column)
             row = int(row)
@@ -95,8 +95,11 @@ def start_game():
             if(res == 1):
                 score("x")
                 print("Player x  has won")
+                user_int()
                 break
 
+            if(k == 5):
+                break
 
             column2,row2 = input("Enter the cordination For 'Player Y' Ex. column,row : ").split()
             column2 = int(column2)
@@ -111,13 +114,35 @@ def start_game():
             if(res == 0):
                 score("o")
                 print("Player o  has won")
+                user_int()
                 break
+            k+=1
+            
         except:
             print()
             user_int()
+        
+
+    tie=result()
+    if(tie == 2):
+        print("Match Drawn")
+        score("t")
+        user_int()
+            
+        
 
         
 def user_int():
+    k=0
+    for i in table:
+        l=0
+        for j in i:
+            table[k][l] = '- '
+            l+=1
+        k+=1
+            
+                
+
     print("'Press R' to start\n'Press S' for score\n'Press Q' to quite" )
     user = input().lower()
     if(user == 's'):

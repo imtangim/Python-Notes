@@ -23,7 +23,7 @@ def tie_o(user, comp):
 
     else:
         user1 = int(input("IT'S A TIE. Enter Again Your Number Player(1): "))
-        user2 = int(input("IT'S A TIE. Enter Again Your Number Player(2): "))
+        user2 = int(input(" Enter Again Your Number Player(2): "))
         return tie_o(user1,user2)
 
 
