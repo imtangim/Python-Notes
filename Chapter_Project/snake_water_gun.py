@@ -106,13 +106,13 @@ elif user == "O":
     user2 = int(input("Select Player(2):\nPress(1) for Snake \nPress(2) for Gun\nPress(3) for Water\n"))
     if result(user1,user2) == 1:
         print("Player(2) have won")
-        with open("Score.txt","a") as f:
+        with open("Python\\Chapter_Project\\Score.txt","a") as f:
             score = f.write("Player(2) is winner---->"+ str(datetime.datetime.now())+"\n")
 
 
     elif result(user1,user2) == 2:
         print("Player(1) have won")
-        with open("Score.txt","a") as f:
+        with open("Python\\Chapter_Project\\Score.txt","a") as f:
             score = f.write("Player(1) is winner---->"+ str(datetime.datetime.now())+"\n")
         
     else:
@@ -121,20 +121,20 @@ elif user == "O":
         tiebreaker = tie_o(user1,user2)
         if tiebreaker == 1:
             print("Player(2) have won")
-            with open("Score.txt","a") as f:
+            with open("Python\\Chapter_Project\\Score.txt","a") as f:
                 score = f.write("Player(2) is winner---->"+ str(datetime.datetime.now())+"\n")
         elif tiebreaker == 2:
             print("Player(1) have have won")
-            with open("Score.txt","a") as f:
+            with open("Python\\Chapter_Project\\Score.txt","a") as f:
                 score = f.write("Player(1) is winner---->"+ str(datetime.datetime.now())+"\n")
         else:
             print("!!!!One of you cheated!!!!\n--->Game dissmissed<---")
-            with open("Score.txt","a") as f:
+            with open("Python\\Chapter_Project\\Score.txt","a") as f:
                 score = f.write("Someone has cheated---->"+ str(datetime.datetime.now())+"\n")
 
 
 elif user == "S":
-    with open("Score.txt","r") as f:
+    with open("Python\\Chapter_Project\\Score.txt","r") as f:
         score = f.read()
     print(score)
 
@@ -145,7 +145,7 @@ elif user == "S":
     if user == "E":
         exit()
     elif user == "R":
-        with open("Score.txt","w") as f:
+        with open("Python\\Chapter_Project\\Score.txt","w") as f:
             clean = f.write("")
         exit()
 
