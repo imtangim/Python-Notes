@@ -1,5 +1,7 @@
-a = "3454"
-print(type(a))
-a = int(a)
-print(type(a))
-print(a)
+a = '3454'
+b = "3"
+print("The sum is: "+str(int(a)+int(b)))
+print(a+b)
+# a = int(a)
+# print(type(a))
+# print(a)

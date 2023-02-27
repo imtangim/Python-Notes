@@ -1,3 +1,7 @@
-import os #modules
+# import os #modules
 
-print("Hello world")
+x =9
+y =8
+sum = x+y
+print(f'The sum is {sum}\n')
+print(f'The sum is {x/y}\n')
