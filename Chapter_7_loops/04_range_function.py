@@ -1,17 +1,11 @@
+def namota(x):
+    for i in range (0,x):
+        for j in range(0,11):
+            steps= i * j
+            print(f'{i} x {j} = {steps}')
+        print(f'namota of {i} is printed')
+            
 
-# printing value without initial point 
-for i in range(8):
-    print(i)
+x = int(input("enter the value = "))
 
-print("end")
-
-# printing value with initial point
-for i in range(2,8):     #(initial point, end point)
-    print(i)
-
-print("end")
-
-
-# printing value with initial point also with step size
-for i in range(2,11,2):     #(initial point, end point)
-    print(i)
+namota(x)
